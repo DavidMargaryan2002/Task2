@@ -1,0 +1,49 @@
+.big_div {
+    width: 300px;
+    margin: 100px auto;
+}
+
+
+.title {
+    text-align: center;
+    color: #007bff;
+}
+
+.small_div {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.email,
+.password,
+.Btn_login {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.Btn_login {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.Btn_login:hover {
+    background-color: #0056b3;
+}
+
+
+.error_message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
