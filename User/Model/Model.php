@@ -1,6 +1,5 @@
 <?php
 
-
 class Model
 {
     private static $instance = null;
@@ -36,9 +35,13 @@ class Model
 
     public function getPost()
     {
-        $query = 'SELECT * FROM `post`';
+        $query = 'SELECT * FROM `post` ';
         $stmt = $this->conn->query($query);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+
+
 }
+
 

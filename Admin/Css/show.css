@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo h1 {
+    color: #333;
+}
+
+.icon-group {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icon-group a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.action-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.action-link:hover {
+    text-decoration: underline;
+}

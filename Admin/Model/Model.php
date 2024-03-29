@@ -50,8 +50,15 @@ class Model
 
     public function getPost()
     {
-        $query = 'SELECT * FROM `post`';
+        $query = 'SELECT * FROM `post` ';
         $stmt = $this->conn->query($query);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public function getPostId($id)
+    {
+        $query = "SELECT * FROM `post` WHERE post_id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([':id' => $id]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     public function deletePost($id)
@@ -59,6 +66,15 @@ class Model
         $query = 'DELETE FROM `post` WHERE `post_id` = :id';
         $stmt = $this->conn->prepare($query);
         $stmt->execute([':id' => $id]);
+    }
+    public function updatePost($title,$content,$id)
+    {
+        $query = "UPDATE post SET title = :title, content = :content WHERE post_id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':title', $title);
+        $stmt->bindParam(':content', $content);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
     }
 
 
