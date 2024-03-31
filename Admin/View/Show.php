@@ -1,7 +1,3 @@
-<?php
-session_start();
-include 'navbar.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +15,10 @@ include 'navbar.php';
         <div class="post">
             <h1><?= htmlspecialchars($post['title']) ?></h1>
             <p><?= htmlspecialchars($post['content']) ?></p>
-            <a href="Update.php" class="action-link">Update</a>
-            <a href="../Controller/methods.php?id=<?= $post['post_id'] ?>&action=Delete" class="action-link">Delete</a>
+            <a href="../Controller/checkInclude.php?id=<?= $post['post_id'] ?>&action=Update">Update</a>
+            <form action="../Controller/methods.php?id=<?= $post['post_id'] ?>&action=View" method="post">
+                <button name="Delete">Delete</button>
+            </form>
         </div>
     <?php endforeach; ?>
 </div>

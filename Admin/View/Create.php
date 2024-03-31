@@ -1,4 +1,3 @@
-<?php include 'navbar.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +11,7 @@
     <h1>Create Page</h1>
 </div>
 <div class="container">
-    <form action="../Controller/methods.php?action=Create" method="post" enctype="multipart/form-data">
+    <form action="../Controller/methods.php?action=View" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" class="input-field" placeholder="Enter title...">
@@ -22,7 +21,7 @@
             <textarea id="content" name="content" class="textarea-field" placeholder="Enter content..."></textarea>
         </div>
         <div class="form-group">
-            <button type="submit" name="btn_submit" class="submit-btn">Submit</button>
+            <button type="submit" name="Create" class="submit-btn">Create</button>
         </div>
     </form>
     <div class="error">

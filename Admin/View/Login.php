@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@
 <div class="big_div">
     <h2 class="title">Login Page</h2>
     <div class="small_div">
-        <form method="post" action="../Controller/methods.php">
+        <form method="post" action="../Controller/methods.php?action=View">
             <input type="text" class="email" name="email" placeholder="Email">
             <input type="password" class="password" name="password" placeholder="Password">
             <button class="Btn_login" name="btn_login">Log In</button>
@@ -23,7 +23,6 @@
                 echo $_SESSION['error'];
                 unset($_SESSION['error']);
             endif;
-            session_unset();
             ?>
         </div>
     </div>

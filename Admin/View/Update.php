@@ -1,6 +1,3 @@
-<?php session_start();
-include 'navbar.php'
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +11,7 @@ include 'navbar.php'
     <h1 class="h1Update">Update Page</h1>
 </div>
 <?php foreach ($_SESSION['array'] as $post):?>
-    <form action="../Controller/methods.php?id=<?= $post['post_id']?>&action=Update" method="post" class="update-form">
+    <form action="../Controller/methods.php?id=<?= $post['post_id']?>&action=View" method="post" class="update-form">
         <input type="hidden" name="post_id" value="<?= $post['post_id']?>">
         <div class="form-group">
             <label for="title">Title:</label>
@@ -25,7 +22,7 @@ include 'navbar.php'
             <textarea id="content" name="content" placeholder="Enter content..."><?= $post['content']?></textarea>
         </div>
         <div class="form-group">
-            <button type="submit" name="update" class="update-btn">Update</button>
+            <button type="submit" name="Update"  class="update-btn">Update</button>
         </div>
     </form>
 <?php endforeach;?>

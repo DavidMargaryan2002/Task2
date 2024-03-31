@@ -17,16 +17,15 @@ class Controller {
             $this->model->insertPost($title, $content);
         } else {
             $_SESSION["error"] = 'The fields must be filled';
-            header('Location:../View/Create.php');
+            header('Location:../View/index.php?action=Create');
             die;
         }
-        header('Location:../View/Create.php');
     }
 
     public function delete() {
         $id = $_GET['id'];
         $this->model->deletePost($id);
-        header('Location:../View/index.php');
+
     }
 
     public function update() {
