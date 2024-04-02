@@ -14,7 +14,7 @@
 <h1>Admin</h1>
 
 <div class="icon-group">
-    <a href="index.php?action=Create">Create</a>
+    <a href="index.php?action=createPage">Create</a>
 </div>
 
 <table>
@@ -30,9 +30,8 @@
             <td>
                 <div class="icon-group">
                     <a href="index.php?id=<?= $post['post_id'] ?>&action=Show">Show</a>
-                    <a href="index.php?id=<?= $post['post_id'] ?>&action=Update">Update</a>
-                    <form action="index.php?id=<?= $post['post_id'] ?>" method="post">
-                        <input type="hidden" name="action" value="delete">
+                    <a href="index.php?id=<?= $post['post_id'] ?>&action=updatePage">Update</a>
+                    <form action="index.php?id=<?= $post['post_id'] ?>&action=Delete" method="post">
                             <button class="Delete">Delete</button>
                     </form>
 

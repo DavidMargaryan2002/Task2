@@ -8,15 +8,15 @@
 </head>
 <body>
 <div class="container">
-    <?php foreach ($_SESSION['array'] as $post): ?>
+    <?php foreach ($_SESSION['posts'] as $post):?>
         <div class="logo">
             <h1>Show Page</h1>
         </div>
         <div class="post">
             <h1><?= htmlspecialchars($post['title']) ?></h1>
             <p><?= htmlspecialchars($post['content']) ?></p>
-            <a href="index.php?id=<?= $post['post_id'] ?>&action=Update">Update</a>
-            <form action="Controller/methods.php?id=<?= $post['post_id'] ?>&action=View" method="post">
+            <a href="index.php?id=<?= $post['post_id'] ?>&action=updatePage">Update</a>
+            <form action="index.php?id=<?= $post['post_id'] ?>&action=Delete" method="post">
                 <button class="Delete" name="Delete">Delete</button>
             </form>
         </div>
