@@ -15,9 +15,9 @@
         <div class="post">
             <h1><?= htmlspecialchars($post['title']) ?></h1>
             <p><?= htmlspecialchars($post['content']) ?></p>
-            <a href="Controller/checkInclude.php?id=<?= $post['post_id'] ?>&action=Update">Update</a>
+            <a href="index.php?id=<?= $post['post_id'] ?>&action=Update">Update</a>
             <form action="Controller/methods.php?id=<?= $post['post_id'] ?>&action=View" method="post">
-                <button name="Delete">Delete</button>
+                <button class="Delete" name="Delete">Delete</button>
             </form>
         </div>
     <?php endforeach; ?>

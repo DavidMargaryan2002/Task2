@@ -12,10 +12,11 @@
 <div class="big_div">
     <h2 class="title">Login Page</h2>
     <div class="small_div">
-        <form method="post" action="Controller/methods.php?action=View">
+        <form method="post" action="index.php?action=View">
             <input type="text" class="email" name="email" placeholder="Email">
             <input type="password" class="password" name="password" placeholder="Password">
-            <button class="Btn_login" name="btn_login">Log In</button>
+            <input type="hidden" name="action" value="btn_login">
+            <button class="Btn_login" >Log In</button>
         </form>
         <div class="error_message">
             <?php

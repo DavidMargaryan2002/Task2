@@ -1,13 +1,18 @@
 <?php
 
-include '../Model/Model.php';
+include 'Model/Model.php';
 
 class Controller {
     private $model;
+    public $id;
 
     public function __construct()
     {
         $this->model = Model::getInstance();
+        if (isset($_GET['id'])){
+            $this->id = $_GET['id'];
+        }
+
     }
 
     public function create()
@@ -32,16 +37,16 @@ class Controller {
 
     public function update()
     {
-        $id = $_GET['id'];
+
         $title = $_POST['title'];
         $content = $_POST['content'];
-        $this->model->updatePost($title, $content, $id);
+        $this->model->updatePost($title, $content, $this->id);
     }
 
     public function get()
     {
-        $id = $_GET['id'];
-        return $this->model->getPostId($id);
+
+        return $this->model->getPostId($this->id);
     }
 
     public function getAll() {

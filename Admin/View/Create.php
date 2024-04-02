@@ -11,7 +11,7 @@
     <h1>Create Page</h1>
 </div>
 <div class="container">
-    <form action="Controller/methods.php?action=View" method="post" enctype="multipart/form-data">
+    <form action="index.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" class="input-field" placeholder="Enter title...">
@@ -21,7 +21,8 @@
             <textarea id="content" name="content" class="textarea-field" placeholder="Enter content..."></textarea>
         </div>
         <div class="form-group">
-            <button type="submit" name="Create" class="submit-btn">Create</button>
+            <input type="hidden" name="action" value="Create">
+            <button type="submit"  class="submit-btn">Create</button>
         </div>
     </form>
     <div class="error">

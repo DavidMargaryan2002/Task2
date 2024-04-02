@@ -14,7 +14,7 @@
 <h1>Admin</h1>
 
 <div class="icon-group">
-    <a href="Controller/checkInclude.php?action=Create">Create</a>
+    <a href="index.php?action=Create">Create</a>
 </div>
 
 <table>
@@ -29,10 +29,11 @@
             <td><?= mb_substr($post['content'], 0, 150) . '...' ?></td>
             <td>
                 <div class="icon-group">
-                    <a href="Controller/checkInclude.php?id=<?= $post['post_id'] ?>&action=Show">Show</a>
-                    <a href="Controller/checkInclude.php?id=<?= $post['post_id'] ?>&action=Update">Update</a>
-                    <form action="Controller/methods.php?id=<?= $post['post_id'] ?>&action=View" method="post">
-                            <button name="Delete">Delete</button>
+                    <a href="index.php?id=<?= $post['post_id'] ?>&action=Show">Show</a>
+                    <a href="index.php?id=<?= $post['post_id'] ?>&action=Update">Update</a>
+                    <form action="index.php?id=<?= $post['post_id'] ?>" method="post">
+                        <input type="hidden" name="action" value="delete">
+                            <button class="Delete">Delete</button>
                     </form>
 
                 </div>

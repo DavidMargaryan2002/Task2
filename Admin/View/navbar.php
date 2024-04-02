@@ -8,9 +8,9 @@
 </head>
 <body>
 <nav class="navbar">
-    <a href="Controller/checkInclude.php?action=View" class="navbar-link">Home</a>
+    <a href="index.php?action=View" class="navbar-link">Home</a>
     <a href="../User/View/index.php" class="navbar-link">User Page</a>
-    <a href="Controller/methods.php?action=logout&direction=Login">Log Out</a>
+    <a href="index.php?action=Login">Log Out</a>
 </nav>
 
 </body>

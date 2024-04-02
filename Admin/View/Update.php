@@ -11,7 +11,7 @@
     <h1 class="h1Update">Update Page</h1>
 </div>
 <?php foreach ($_SESSION['array'] as $post):?>
-    <form action="Controller/methods.php?id=<?= $post['post_id']?>&action=View" method="post" class="update-form">
+    <form action="index.php?id=<?= $post['post_id']?>&action=View" method="post" class="update-form">
         <input type="hidden" name="post_id" value="<?= $post['post_id']?>">
         <div class="form-group">
             <label for="title">Title:</label>
@@ -22,7 +22,8 @@
             <textarea id="content" name="content" placeholder="Enter content..."><?= $post['content']?></textarea>
         </div>
         <div class="form-group">
-            <button type="submit" name="Update"  class="update-btn">Update</button>
+            <input type="hidden" name="action" value="update">
+            <button type="submit"   class="update-btn">Update</button>
         </div>
     </form>
 <?php endforeach;?>

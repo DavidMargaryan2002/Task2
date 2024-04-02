@@ -39,3 +39,8 @@ th {
 .icon-group a:hover {
     background-color: #0056b3;
 }
+.Delete {
+    display: inline-block;
+    background-color: #dc3545;
+    transition: background-color 0.3s;
+}

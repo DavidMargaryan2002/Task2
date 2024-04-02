@@ -7,8 +7,11 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -17,45 +20,42 @@ body {
 }
 
 .logo h1 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 24px;
     color: #333;
 }
 
-.icon-group {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.icon-group a {
-    color: #007bff;
-    text-decoration: none;
-    margin-right: 10px;
-}
-
 .post {
-    background-color: #fff;
+    background-color: #f9f9f9;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
 }
 
 .post h1 {
-    font-size: 24px;
+    margin-top: 0;
     color: #333;
-    margin-bottom: 10px;
 }
 
 .post p {
-    font-size: 18px;
     color: #666;
-    margin-bottom: 15px;
 }
 
-.action-link {
-    color: #007bff;
+.post a, .post button.Delete {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 10px;
     text-decoration: none;
-    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.action-link:hover {
-    text-decoration: underline;
+.post a:hover, .post button.Delete:hover {
+    background-color: #0056b3;
 }
