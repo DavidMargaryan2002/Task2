@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="../Css/update.css" type="text/css">
+    <link rel="stylesheet" href="Css/update.css" type="text/css">
 </head>
 <body>
 <div class="container">
     <h1 class="h1Update">Update Page</h1>
 </div>
 <?php foreach ($_SESSION['array'] as $post):?>
-    <form action="../Controller/methods.php?id=<?= $post['post_id']?>&action=View" method="post" class="update-form">
+    <form action="Controller/methods.php?id=<?= $post['post_id']?>&action=View" method="post" class="update-form">
         <input type="hidden" name="post_id" value="<?= $post['post_id']?>">
         <div class="form-group">
             <label for="title">Title:</label>

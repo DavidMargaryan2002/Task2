@@ -10,32 +10,36 @@ class Controller {
         $this->model = Model::getInstance();
     }
 
-    public function create() {
+    public function create()
+    {
         $title = $_POST['title'];
         $content = $_POST['content'];
         if (!empty($title) && !empty($content)) {
             $this->model->insertPost($title, $content);
         } else {
             $_SESSION["error"] = 'The fields must be filled';
-            header('Location:../View/index.php?action=Create');
+            header('Location:../index.php?action=Create');
             die;
         }
     }
 
-    public function delete() {
+    public function delete()
+    {
         $id = $_GET['id'];
         $this->model->deletePost($id);
 
     }
 
-    public function update() {
+    public function update()
+    {
         $id = $_GET['id'];
         $title = $_POST['title'];
         $content = $_POST['content'];
         $this->model->updatePost($title, $content, $id);
     }
 
-    public function get() {
+    public function get()
+    {
         $id = $_GET['id'];
         return $this->model->getPostId($id);
     }
@@ -44,7 +48,8 @@ class Controller {
         return $this->model->getPost();
     }
 
-    public function login() {
+    public function login()
+    {
         $email = $_POST['email'];
         $password = $_POST['password'];
         $hashPassword = md5($password);

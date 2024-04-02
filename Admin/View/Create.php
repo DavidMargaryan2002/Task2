@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page</title>
-    <link rel="stylesheet" href="../Css/create.css" type="text/css">
+    <link rel="stylesheet" href="Css/create.css" type="text/css">
 </head>
 <body>
 <div class="header">
     <h1>Create Page</h1>
 </div>
 <div class="container">
-    <form action="../Controller/methods.php?action=View" method="post" enctype="multipart/form-data">
+    <form action="Controller/methods.php?action=View" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" class="input-field" placeholder="Enter title...">

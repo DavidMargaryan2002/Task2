@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../Css/show.css" type="text/css">
+    <link rel="stylesheet" href="Css/show.css" type="text/css">
 </head>
 <body>
 <div class="container">
@@ -15,8 +15,8 @@
         <div class="post">
             <h1><?= htmlspecialchars($post['title']) ?></h1>
             <p><?= htmlspecialchars($post['content']) ?></p>
-            <a href="../Controller/checkInclude.php?id=<?= $post['post_id'] ?>&action=Update">Update</a>
-            <form action="../Controller/methods.php?id=<?= $post['post_id'] ?>&action=View" method="post">
+            <a href="Controller/checkInclude.php?id=<?= $post['post_id'] ?>&action=Update">Update</a>
+            <form action="Controller/methods.php?id=<?= $post['post_id'] ?>&action=View" method="post">
                 <button name="Delete">Delete</button>
             </form>
         </div>
