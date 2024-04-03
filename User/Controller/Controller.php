@@ -8,13 +8,12 @@ class Controller {
     }
     public function getAll()
     {
-        $posts = $this->model->getPost();
-        $totalPosts = count($posts);
-        $postsPerPage = 4;
+        $postsPerPage = 3;
+        $totalPosts = count($this->model->getPost());
         $totalPages = ceil($totalPosts / $postsPerPage);
-        $currentpage = $_GET['page'] ?? 1;
-        $offset = ($currentpage - 1) * $postsPerPage;
-        $postsToDisplay = array_slice($posts, $offset, $postsPerPage);
+        $pageNumber = isset($_GET['page']) ? $_GET['page'] : 1;
+        $offset = ($pageNumber - 1) * $postsPerPage;
+        $posts = $this->model->getPosts($postsPerPage, $offset);
         include 'View/View.php';
     }
 

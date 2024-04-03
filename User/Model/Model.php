@@ -39,7 +39,15 @@ class Model
         $stmt = $this->conn->query($query);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
+    public function getPosts($limit, $offset)
+    {
+        $query = 'SELECT * FROM `post` LIMIT :limit OFFSET :offset';
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 
 
 }

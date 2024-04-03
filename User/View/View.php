@@ -11,19 +11,20 @@
 <body>
 <h1>Wikipedia</h1>
 <h2>Աշխարհի 7 հրաշալիքները</h2>
-<?php foreach ($postsToDisplay as $value): ?>
+<?php foreach ($posts as $value): ?>
     <div class="container">
         <h1><?=$value['title'] ?></h1>
         <div class="full-text">
             <p><?=$value['content'] ?></p>
         </div>
-    </div>  
+    </div>
 <?php endforeach; ?>
 <div class="pagination">
     <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
-        <a href="?page=<?= $i ?>"><?= $i ?></a>
+    <a href="?page=<?= $i ?>"><?=$i?></a>
     <?php endfor; ?>
-</div>
+    </div>
+
 
 </body>
 </html>
