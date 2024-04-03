@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'Model/Model.php';
-include 'Controller/postControl.php';
+include 'Controller/postController.php';
 switch ($_GET['action']) {
     case 'createPage':
         $controller = new postController();
