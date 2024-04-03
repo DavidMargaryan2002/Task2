@@ -1,5 +1,5 @@
 <?php
-class postController
+class PostController
 {
     private $model;
 
