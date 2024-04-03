@@ -1,8 +1,5 @@
 <?php
-
-include '../Model/Model.php';
-
-class Control {
+class Controller {
     private $model;
 
     public function __construct()
@@ -10,9 +7,9 @@ class Control {
         $this->model = Model::getInstance();
     }
     public function getAll() {
-        return $this->model->getPost();
+        $post = $this->model->getPost();
+        include 'View/View.php';
     }
-
 
 }
 

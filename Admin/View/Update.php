@@ -10,7 +10,7 @@
 <div class="container">
     <h1 class="h1Update">Update Page</h1>
 </div>
-<?php foreach ($_SESSION['posts'] as $post):?>
+<?php foreach ($arrayShow as $post):?>
     <form action="index.php?id=<?= $post['post_id']?>&action=Update" method="post" class="update-form">
         <input type="hidden" name="post_id" value="<?= $post['post_id']?>">
         <div class="form-group">

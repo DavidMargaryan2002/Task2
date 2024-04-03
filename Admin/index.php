@@ -1,41 +1,43 @@
 <?php
+session_start();
+include 'Model/Model.php';
 include 'Controller/postControl.php';
-$controller = new Controller();
-$controller->navbar();
-$controller->checkAdmin();
-
 switch ($_GET['action']) {
     case 'createPage':
+        $controller = new postController();
+        $controller->navbar();
         $controller->createPage();
         break;
     case 'Create':
+        $controller = new postController();
         $controller->create();
         break;
     case 'View':
+        $controller = new postController();
+        $controller->checkAdmin();
+        $controller->navbar();
         $controller->view();
         break;
     case 'Show':
-        if (isset($_GET['id'])) {
-            $id = $_GET['id'];
-            $controller->show($id);
-        }
+            $controller = new postController();
+            $controller->navbar();
+            $controller->show();
         break;
     case 'Delete':
+        $controller = new postController();
         $controller->delete();
         break;
     case 'Update':
-        if (isset($_GET['id'])) {
-            $id = $_GET['id'];
-            $controller->update($id);
-        }
+            $controller = new postController();
+            $controller->update();
         break;
     case 'updatePage':
-        if (isset($_GET['id'])) {
-            $id = $_GET['id'];
-            $controller->updatePage($id);
-        }
+            $controller = new postController();
+            $controller->navbar();
+            $controller->updatePage();
         break;
     case 'logout':
+        $controller = new postController();
         $controller->logout();
         break;
 }

@@ -9,7 +9,7 @@
 <body>
 <nav class="navbar">
     <a href="index.php?action=View" class="navbar-link">Home</a>
-    <a href="../User/View/index.php" class="navbar-link">User Page</a>
+    <a href="../User/index.php" class="navbar-link">User Page</a>
     <a href="index.php?action=logout">Log Out</a>
 </nav>
 

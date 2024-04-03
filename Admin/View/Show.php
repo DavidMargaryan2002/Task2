@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-    <?php foreach ($_SESSION['posts'] as $post):?>
+    <?php foreach ($arrayShow as $post):?>
         <div class="logo">
             <h1>Show Page</h1>
         </div>

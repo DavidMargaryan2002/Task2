@@ -23,7 +23,7 @@
         <th>Նյութ</th>
         <th>Ֆունկցիաներ</th>
     </tr>
-    <?php foreach ($_SESSION['post'] as $post):?>
+    <?php foreach ($arrayView as $post):?>
         <tr>
             <td><?= mb_substr($post['title'], 0, 50) ?></td>
             <td><?= mb_substr($post['content'], 0, 150) . '...' ?></td>
