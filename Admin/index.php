@@ -2,7 +2,8 @@
 session_start();
 include 'Model/Model.php';
 include 'Controller/PostController.php';
-switch ($_GET['action']) {
+$action = $_GET['action'] ?? Null;
+switch ($action) {
     case 'createPage':
         $controller = new PostController();
         $controller->navbar();
@@ -37,6 +38,10 @@ switch ($_GET['action']) {
             $controller->updatePage();
         break;
     case 'logout':
+        $controller = new PostController();
+        $controller->logout();
+        break;
+    default:
         $controller = new PostController();
         $controller->logout();
         break;
