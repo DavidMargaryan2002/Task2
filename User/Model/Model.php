@@ -32,13 +32,14 @@ class Model
     {
         $this->conn = null;
     }
-
-    public function getPost()
+    public function getPostCount()
     {
-        $query = 'SELECT * FROM `post` ';
+        $query = 'SELECT COUNT(*) AS post_id FROM `post`';
         $stmt = $this->conn->query($query);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $row['post_id'];
     }
+
     public function getPosts($limit, $offset)
     {
         $query = 'SELECT * FROM `post` LIMIT :limit OFFSET :offset';
@@ -48,6 +49,7 @@ class Model
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
 
 
 }

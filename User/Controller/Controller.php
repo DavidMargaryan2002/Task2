@@ -9,7 +9,7 @@ class Controller {
     public function getAll()
     {
         $postsPerPage = 3;
-        $totalPosts = count($this->model->getPost());
+        $totalPosts = $this->model->getPostCount();
         $totalPages = ceil($totalPosts / $postsPerPage);
         $pageNumber = isset($_GET['page']) ? $_GET['page'] : 1;
         $offset = ($pageNumber - 1) * $postsPerPage;
